@@ -14,7 +14,7 @@
 
 <div class="min-h-screen bg-gray-100 flex flex-col justify-center py-12 px-6 lg:px-8">
   <div class="sm:mx-auto sm:w-full sm:max-w-md">
-    <h2 class="mt-6 text-center text-3xl font-bold text-gray-900">Create your account</h2>
+    <h2 class="mt-6 text-center text-3xl font-bold text-gray-900">Create an account</h2>
     <p class="mt-2 text-center text-sm text-gray-600 max-w">
       Already registered?
       <a href="/login" class="font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500">Sign in</a>
@@ -49,6 +49,18 @@
           </div>
         </div>
 
+        <div>
+          <label for="company-size" class="block text-sm font-medium text-gray-700">Company size</label>
+          <div class="mt-1">
+            <select name="company-size" id="company-size" class="">
+              <option value="">Please select</option>
+              <option value="small">1 to 10 employees</option>
+              <option value="medium">11 to 50 employees</option>
+              <option value="large">50+ employees</option>
+            </select>
+          </div>
+        </div>
+        
         <!-- <div class="flex items-center">
           <input id="terms-and-privacy" name="terms-and-privacy" type="checkbox" class="" />
           <label for="terms-and-privacy" class="ml-2 block text-sm text-gray-900"
