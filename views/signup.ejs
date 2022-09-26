@@ -39,6 +39,17 @@
         </div>
 
         <div>
+          <label for="gender" class="block text-sm font-medium text-gray-700">Gender</label>
+          <div class="mt-1">
+            <select name="gender" id="gender" class="w-full border border-gray-300 px-2 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500">
+              <option value="small">Please select</option>
+              <option value="medium">Male</option>
+              <option value="medium">Female</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
           <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
           <div class="mt-1">
             <input id="email" name="email" type="email" autocomplete="email" required class="w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" />
@@ -53,13 +64,9 @@
         </div>
 
         <div>
-          <label for="gender" class="block text-sm font-medium text-gray-700">Gender</label>
+          <label for="confirmPassword" class="block text-sm font-medium text-gray-700">Confirm Password</label>
           <div class="mt-1">
-            <select name="gender" id="gender" class="w-full border border-gray-300 px-2 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500">
-              <option value="small">Please select</option>
-              <option value="medium">Male</option>
-              <option value="medium">Female</option>
-            </select>
+            <input id="confirmPassword" name="confirmPassword" type="password" autocomplete="current-password" required class="w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" />
           </div>
         </div>
 
