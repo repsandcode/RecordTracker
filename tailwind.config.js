@@ -2,18 +2,14 @@
 
 module.exports = {
   content: [
-    './views/index.ejs',
-    './views/login.ejs',
-    './views/signup.ejs',
+    "./src/*.{html,js,css}",
+    "./views/*.ejs",
   ],
   theme: {
     extend: {},
   },
   // tailwind.config.js
   plugins: [
-    require("@tailwindcss/forms")({
-      strategy: 'base', // only generate global styles
-      strategy: 'class', // only generate classes
-    }),
+    require("@tailwindcss/forms")
   ],
 }

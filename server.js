@@ -8,6 +8,7 @@ const methodOverride = require('method-override');
 const flash = require('express-flash');
 const logger = require('morgan');
 const connectDB = require('./config/database');
+const path = require('path');
 // Routes Variables
 const mainRoutes = require('./routes/main');
 
@@ -21,6 +22,8 @@ require('dotenv').config({ path: "./config/.env" });
 // connect to Database
 connectDB();
 
+// => Here we expose the views so it can be rendered.
+app.set('views', path.join(__dirname, 'views'));
 // Using EJS for views
 app.set('view engine', 'ejs');
 
