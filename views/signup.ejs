@@ -25,16 +25,30 @@
     <div class="bg-white py-8 px-6 shadow rounded-lg sm:px-10">
       <form class="mb-0 space-y-6" action="#" method="POST">
         <div>
-          <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
+          <label for="first-name" class="block text-sm font-medium text-gray-700">First Name</label>
           <div class="mt-1">
-            <input id="email" name="email" type="email" autocomplete="email" required class="w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" />
+            <input id="first-name" name="first-name" type="text" autocomplete="given-name" required class="w-full border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" />
+          </div>
+        </div>
+
+        <div>
+          <label for="last-name" class="block text-sm font-medium text-gray-700">Last Name</label>
+          <div class="mt-1">
+            <input id="last-name" name="last-name" type="text" autocomplete="family-name" required class="w-full border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" />
+          </div>
+        </div>
+
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+          <div class="mt-1">
+            <input id="email" name="email" type="email" autocomplete="email" required class="w-full border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" />
           </div>
         </div>
 
         <div>
           <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
           <div class="mt-1">
-            <input id="password" name="password" type="password" autocomplete="current-password" required class="w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" />
+            <input id="password" name="password" type="password" autocomplete="current-password" required class="w-full border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" />
           </div>
         </div>
 
@@ -49,18 +63,6 @@
           </div>
         </div>
 
-        <div>
-          <label for="company-size" class="block text-sm font-medium text-gray-700">Company size</label>
-          <div class="mt-1">
-            <select name="company-size" id="company-size" class="">
-              <option value="">Please select</option>
-              <option value="small">1 to 10 employees</option>
-              <option value="medium">11 to 50 employees</option>
-              <option value="large">50+ employees</option>
-            </select>
-          </div>
-        </div>
-        
         <!-- <div class="flex items-center">
           <input id="terms-and-privacy" name="terms-and-privacy" type="checkbox" class="" />
           <label for="terms-and-privacy" class="ml-2 block text-sm text-gray-900"
