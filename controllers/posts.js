@@ -13,7 +13,8 @@ module.exports = {
   getFeed: async (req, res) => {
     try {
       const posts = await Post.find().sort({ createdAt: "desc" }).lean();
-      res.render("feed.ejs", { posts: posts });
+      // res.render("feed.ejs", { posts: posts });
+      res.render("feed.ejs");
     } catch (err) {
       console.log(err);
     }
@@ -21,8 +22,8 @@ module.exports = {
   getPost: async (req, res) => {
     try {
       const post = await Post.findById(req.params.id);
-      // res.render("post.ejs", { post: post, user: req.user });
-      res.render("post.ejs");
+      res.render("post.ejs", { post: post, user: req.user });
+      // res.render("post.ejs");
     } catch (err) {
       console.log(err);
     }
