@@ -2,29 +2,41 @@
 
 
 <div class="min-h-screen bg-gray-100 flex flex-col justify-center py-12 px-6 lg:px-8">
-  <% if (locals.messages.errors) { %>
+  <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+    <% if (locals.messages.errors) { %>
       <% messages.errors.forEach( el => { %>
         <div class="alert alert-warning shadow-lg">
           <div>
             <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
             <span><%= el.msg %></span>
           </div>
+          <button class="inline-block text-dark-400 hover:text-indigo-300">
+            <svg width="10" height="10" viewbox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.93996 5.00001L8.80663 2.14001C8.93216 2.01448 9.00269 1.84421 9.00269 1.66668C9.00269 1.48914 8.93216 1.31888 8.80663 1.19335C8.68109 1.06781 8.51083 0.997284 8.33329 0.997284C8.15576 0.997284 7.9855 1.06781 7.85996 1.19335L4.99996 4.06001L2.13996 1.19335C2.01442 1.06781 1.84416 0.997284 1.66663 0.997284C1.48909 0.997284 1.31883 1.06781 1.19329 1.19335C1.06776 1.31888 0.997231 1.48914 0.997231 1.66668C0.997231 1.84421 1.06776 2.01448 1.19329 2.14001L4.05996 5.00001L1.19329 7.86001C1.13081 7.92199 1.08121 7.99572 1.04737 8.07696C1.01352 8.1582 0.996094 8.24534 0.996094 8.33334C0.996094 8.42135 1.01352 8.50849 1.04737 8.58973C1.08121 8.67097 1.13081 8.7447 1.19329 8.80668C1.25527 8.86916 1.329 8.91876 1.41024 8.95261C1.49148 8.98645 1.57862 9.00388 1.66663 9.00388C1.75463 9.00388 1.84177 8.98645 1.92301 8.95261C2.00425 8.91876 2.07798 8.86916 2.13996 8.80668L4.99996 5.94001L7.85996 8.80668C7.92194 8.86916 7.99567 8.91876 8.07691 8.95261C8.15815 8.98645 8.24529 9.00388 8.33329 9.00388C8.4213 9.00388 8.50844 8.98645 8.58968 8.95261C8.67092 8.91876 8.74465 8.86916 8.80663 8.80668C8.86911 8.7447 8.91871 8.67097 8.95255 8.58973C8.9864 8.50849 9.00383 8.42135 9.00383 8.33334C9.00383 8.24534 8.9864 8.1582 8.95255 8.07696C8.91871 7.99572 8.86911 7.92199 8.80663 7.86001L5.93996 5.00001Z" fill="currentColor"></path>
+            </svg>
+          </button>
         </div>
       <% }) %>    
-  <% } %>
-  <% if (locals.messages.info) { %>
-      <% messages.info.forEach( el => { %>
-        <div class="alert alert-info shadow-lg">
-          <div>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current flex-shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span><%= el.msg %></span>
+    <% } %>
+    <% if (locals.messages.info) { %>
+        <% messages.info.forEach( el => { %>
+          <div class="alert alert-info shadow-lg">
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current flex-shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span><%= el.msg %></span>
+            </div>
+            <button class="inline-block text-dark-400 hover:text-indigo-300">
+              <svg width="10" height="10" viewbox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.93996 5.00001L8.80663 2.14001C8.93216 2.01448 9.00269 1.84421 9.00269 1.66668C9.00269 1.48914 8.93216 1.31888 8.80663 1.19335C8.68109 1.06781 8.51083 0.997284 8.33329 0.997284C8.15576 0.997284 7.9855 1.06781 7.85996 1.19335L4.99996 4.06001L2.13996 1.19335C2.01442 1.06781 1.84416 0.997284 1.66663 0.997284C1.48909 0.997284 1.31883 1.06781 1.19329 1.19335C1.06776 1.31888 0.997231 1.48914 0.997231 1.66668C0.997231 1.84421 1.06776 2.01448 1.19329 2.14001L4.05996 5.00001L1.19329 7.86001C1.13081 7.92199 1.08121 7.99572 1.04737 8.07696C1.01352 8.1582 0.996094 8.24534 0.996094 8.33334C0.996094 8.42135 1.01352 8.50849 1.04737 8.58973C1.08121 8.67097 1.13081 8.7447 1.19329 8.80668C1.25527 8.86916 1.329 8.91876 1.41024 8.95261C1.49148 8.98645 1.57862 9.00388 1.66663 9.00388C1.75463 9.00388 1.84177 8.98645 1.92301 8.95261C2.00425 8.91876 2.07798 8.86916 2.13996 8.80668L4.99996 5.94001L7.85996 8.80668C7.92194 8.86916 7.99567 8.91876 8.07691 8.95261C8.15815 8.98645 8.24529 9.00388 8.33329 9.00388C8.4213 9.00388 8.50844 8.98645 8.58968 8.95261C8.67092 8.91876 8.74465 8.86916 8.80663 8.80668C8.86911 8.7447 8.91871 8.67097 8.95255 8.58973C8.9864 8.50849 9.00383 8.42135 9.00383 8.33334C9.00383 8.24534 8.9864 8.1582 8.95255 8.07696C8.91871 7.99572 8.86911 7.92199 8.80663 7.86001L5.93996 5.00001Z" fill="currentColor"></path>
+              </svg>
+            </button>
           </div>
-        </div>
-      <% }) %>    
-  <% } %>
+        <% }) %>    
+    <% } %>
+  </div>
   
   <div class="sm:mx-auto sm:w-full sm:max-w-md">
-    <h2 class="mt-6 text-center text-3xl font-bold text-gray-900">Create an account</h2>
+    <h2 class="mt-6 text-center text-3xl font-bold text-dark-900">Create an account</h2>
     <p class="mt-2 text-center text-sm text-gray-600 max-w">
       Already registered?
       <a href="/login" class="font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500">Sign in</a>
