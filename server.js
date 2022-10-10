@@ -17,7 +17,7 @@ const mainRoutes = require('./routes/main');
 require('dotenv').config({ path: "./config/.env" });
 
 // passport config
-// require('./config/passport')(passport);
+require('./config/passport')(passport);
 
 // connect to Database
 connectDB();
