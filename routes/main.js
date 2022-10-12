@@ -14,6 +14,9 @@ router.get("/", homeController.getIndex);
 router.get("/login", authController.getLogin);
 router.post("/login", authController.postLogin);
 
+// logout
+router.get("/logout", authController.logout);
+
 // signup
 router.get("/signup", authController.getSignup);
 router.post("/signup", authController.postSignup);
