@@ -1,13 +1,23 @@
-document.querySelector("#menu-open").addEventListener("click", dropdown);
-document.querySelector("#menu-close").addEventListener("click", closeDropdown);
+document.querySelector("#hamburger-menu").addEventListener("click", dropdown);
 
 function dropdown() {
-  document.querySelector("#menu-open").classList.toggle('hidden')
-}
+  if(document.querySelector("#menu-open").classList.contains('block')){
+    // hamburger menu
+    document.querySelector("#menu-open").classList.remove('block');
+    document.querySelector("#menu-open").classList.toggle('hidden');
 
-function closeDropdown() {
-  document.querySelector("#menu-close").classList.toggle('block')
-  document.querySelector("#menu-close").classList.toggle('hidden')
-  document.querySelector("#menu-open").classList.toggle('block')
-  document.querySelector("#menu-open").classList.toggle('hidden')
-} 
+    // x mark
+    document.querySelector("#menu-close").classList.remove('hidden');
+    document.querySelector("#menu-close").classList.toggle('block');
+  }else{
+    // if x-mark contains block
+
+    // hamburger menu
+    document.querySelector("#menu-open").classList.remove('hidden');
+    document.querySelector("#menu-open").classList.toggle('block');
+
+    // x mark
+    document.querySelector("#menu-close").classList.remove('block');
+    document.querySelector("#menu-close").classList.toggle('hidden');
+  }
+}
