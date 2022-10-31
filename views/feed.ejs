@@ -1,7 +1,7 @@
 <%- include('partials/header') -%>
 
 <div class="bg-transparent">
-  <div class="mx-auto max-w-5xl px-6 lg:px-8 pt-12 pb-14 sm:py-12 md:py-10 lg:py-8 flex items-center justify-between">
+  <div class="mx-auto max-w-6xl px-6 lg:px-8 pt-12 pb-14 sm:py-12 md:py-10 lg:py-8 flex items-center justify-between">
     <div class="font-semibold">
       <span class="block text-sm md:text-lg lg:text-xl ">Hi <%= user.firstName %>,</span>
       <span class="block text-xl md:text-2xl lg:text-3xl ">Good Morning!</span>
@@ -15,21 +15,31 @@
 </div>
 
 <!-- start of feed -->
-<div class="mx-auto max-w-5xl px-6 lg:px-8 py-8">
-  <div class="card w-96 bg-base-100 shadow-xl">
-    <!-- <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure> -->
-    <div class="card-body">
-      <h2 class="card-title">
-        Shoes!
-        <div class="badge badge-secondary">NEW</div>
-      </h2>
-      <p>If a dog chews shoes whose shoes does he choose?</p>
-      <div class="card-actions justify-end">
-        <div class="badge badge-outline">Fashion</div> 
-        <div class="badge badge-outline">Products</div>
+<div class="mx-auto max-w-6xl px-6 lg:px-8 py-8">
+  <!-- grid -->
+  <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
+    <div class="group relative">
+      <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden bg-base-100 shadow-xl">        
+        <!-- can add google maps location at here above description -->
+        <div class="">
+          <h2 class="">
+            Shoes!
+            <div class="badge badge-secondary">NEW</div>
+          </h2>
+          <p>If a dog chews shoes whose shoes does he choose?</p>
+          <div class="">
+            <div class="badge badge-outline">Fashion</div> 
+            <div class="badge badge-outline">Products</div>
+          </div>
+        </div>
+
       </div>
     </div>
+    
+
+
   </div>
+  
 </div>
 
       
