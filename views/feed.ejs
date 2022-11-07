@@ -19,7 +19,7 @@
     <!-- grid -->
     <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 md:grid-cols-2 xl:gap-x-8">
       <div class="group relative">
-        <div class="relative group-hover:cursor-crosshair group-hover:opacity-90 aspect-w-1 aspect-h-1 w-full rounded-lg px-4 py-2 overflow-hidden bg-base-100 shadow-xl ">       
+        <div class="relative group-hover:cursor-crosshair group-hover:opacity-80 aspect-w-1 aspect-h-1 w-full rounded-lg px-4 py-2 overflow-hidden bg-base-100 shadow-xl ">       
           <!-- can add google maps location at here above description -->
 
           <div class="">
@@ -30,7 +30,7 @@
             </div>
 
             <!-- details of the householder -->
-            <div class="flex">
+            <div class="flex justify-between">
               <!-- left side -->
               <div class="border-solid border-2 border-sky-500">
                 <span class="block">Nepali</span>
@@ -38,15 +38,17 @@
               </div>
 
               <!-- right side -->
-              <div class="border-solid border-2 border-red-500">
-                <span>Bible Study</span>
-                <span>English Dependent</span>
-                <span>Attending Meetings</span>
+              <div class="grid grid-rows-2 grid-flow-col gap-x-4 gap-y-1 border-solid border-2 border-red-500">
+                <span class="flex items-center justify-center rounded-full border border-indigo-100 bg-black px-2 py-1 text-sm text-white font-medium">Bible Study</span>
+                <span class="flex items-center justify-center rounded-full border border-indigo-100 bg-black px-2 py-1 text-sm text-white font-medium">English Dependent</span>
+                <span class="flex items-center justify-center rounded-full border border-indigo-100 bg-black px-2 py-1 text-sm text-white font-medium">Attending Meetings</span>
               </div>
             </div>
 
             <!-- last updated -->
-            <span class="text-gray-600 text-sm font-medium">updated 2 days ago</span>
+            <div class="border-t-2 border-gray-600">
+              <span class="text-gray-600 text-sm font-medium">updated 2 days ago</span>
+            </div>
           </div>
 
         </div>
