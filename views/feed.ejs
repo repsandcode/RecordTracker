@@ -20,7 +20,7 @@
     <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 md:grid-cols-2 xl:gap-x-8">
       <!-- showing of posts aka calls -->
       <div class="group relative">
-        <div class="relative group-hover:cursor-crosshair group-hover:opacity-80 aspect-w-1 aspect-h-1 w-full rounded-lg px-4 py-2.5 overflow-hidden bg-base-100 shadow-xl">       
+        <div class="relative group-hover:cursor-crosshair group-hover:opacity-80 aspect-w-1 aspect-h-1 w-full rounded-lg px-4 py-3 overflow-hidden bg-base-100 shadow-xl">       
           <!-- can add google maps location at here above description -->
           <div class="">
             <!-- name and button -->
@@ -48,22 +48,22 @@
               <!-- right side -->
               <div class="border-solid pl-8">
                 <ul class="outline-0 flex flex-wrap flex-row-reverse">
-                  <li class="flex items-center justify-center rounded-full border border-indigo-100 bg-black px-3 py-1.5 ml-0.5 mb-0.5 text-xs md:text-sm text-white font-normal">Bible Study</li>
-                  <li class="flex items-center justify-center rounded-full border border-indigo-100 bg-black px-3 py-1.5 ml-0.5 mb-0.5 text-xs md:text-sm text-white font-normal">English Dependent</li>
-                  <li class="flex items-center justify-center rounded-full border border-indigo-100 bg-black px-3 py-1.5 ml-0.5 mb-0.5 text-xs md:text-sm text-white font-normal">Attending Meetings</li>
+                  <li class="flex items-center justify-center rounded-full border border-indigo-100 bg-black px-3.5 py-1.5 ml-0.5 mb-0.5 text-xs md:text-sm text-white font-normal">Bible Study</li>
+                  <li class="flex items-center justify-center rounded-full border border-indigo-100 bg-black px-3.5 py-1.5 ml-0.5 mb-0.5 text-xs md:text-sm text-white font-normal">English Dependent</li>
+                  <li class="flex items-center justify-center rounded-full border border-indigo-100 bg-black px-3.5 py-1.5 ml-0.5 mb-0.5 text-xs md:text-sm text-white font-normal">Attending Meetings</li>
                 </ul>
               </div>
             </div>
             <!-- last updated -->
             <div class="border-t border-gray-300">
-              <span class="text-gray-600 text-xs md:text-sm font-medium space-x-2"><i class="fa-regular fa-clock mr-1 md:mt-2.5"></i> updated 2 days ago</span>
+              <span class="text-gray-600 text-xs md:text-sm font-medium space-x-2"><i class="fa-regular fa-clock mr-1 md:mt-2.5 mb-2"></i> updated 2 days ago</span>
             </div>
           </div>
         </div>
       </div>
 
       <div class="group relative">
-        <div class="relative group-hover:cursor-crosshair group-hover:opacity-80 aspect-w-1 aspect-h-1 w-full rounded-lg px-4 py-3.5 overflow-hidden bg-base-100 shadow-xl">       
+        <div class="relative group-hover:cursor-crosshair group-hover:opacity-80 aspect-w-1 aspect-h-1 w-full rounded-lg px-4 py-3 overflow-hidden bg-base-100 shadow-xl">       
           <!-- can add google maps location at here above description -->
           <div class="">
             <!-- name and button -->
@@ -72,34 +72,32 @@
               <!-- possible button to update record -->
             </div>
             <!-- details of the householder -->
-            <div class="flex justify-between mb-4">
-              <!-- left side -->
-              <div class="border-solid">
-                <span class="block flex items-center mb-0.5 text-sm md:text-base font-medium">
-                  <span class="w-5">
-                    <i class="fa-solid fa-language"></i>
-                  </span>
-                  <span class="ml-3">Nepali</span>
+            <div class="flex flex-col space-y-3 mb-4">
+              <!-- upper | nationality and location in our territory -->
+              <div class="flex border-solid">
+                <span class="items-center text-sm md:text-base font-medium mr-4">
+                  <i class="fa-solid fa-language mr-2"></i>Nepali
                 </span>
-                <span class="block flex items-center mb-0.5 text-sm md:text-base font-medium">
-                  <span class="w-5 flex justify-center">
-                    <i class="fa-solid fa-location-dot"></i>
-                  </span>
-                  <span class="ml-3">Amado</span>
+                <!-- <span class="flex items-center">
+                  <span class="border-l-2 border-gray-500 h-3"></span>
+                </span> -->
+                <span class="items-center text-sm md:text-base font-medium ml-4">
+                  <i class="fa-solid fa-location-dot mr-2"></i>Amado
                 </span>
               </div>
-              <!-- right side -->
-              <div class="border-solid pl-8">
-                <ul class="outline-0 flex flex-wrap flex-row-reverse">
-                  <li class="flex items-center justify-center rounded-full border border-indigo-100 bg-black px-3 py-1.5 ml-0.5 mb-0.5 text-xs md:text-sm text-white font-normal">Bible Study</li>
-                  <li class="flex items-center justify-center rounded-full border border-indigo-100 bg-black px-3 py-1.5 ml-0.5 mb-0.5 text-xs md:text-sm text-white font-normal">English Dependent</li>
-                  <li class="flex items-center justify-center rounded-full border border-indigo-100 bg-black px-3 py-1.5 ml-0.5 mb-0.5 text-xs md:text-sm text-white font-normal">Attending Meetings</li>
+              <!-- bottom | status as a call -->
+              <div class="border-solid">
+                <ul class="outline-0 flex flex-wrap">
+                  <li class="flex items-center justify-center rounded-full border border-indigo-100 bg-black px-3.5 py-1.5 mr-0.5 mb-0.5 text-xs md:text-sm text-white font-normal">Bible Study</li>
+                  <li class="flex items-center justify-center rounded-full border border-indigo-100 bg-black px-3.5 py-1.5 mr-0.5 mb-0.5 text-xs md:text-sm text-white font-normal">English Dependent</li>
+                  <li class="flex items-center justify-center rounded-full border border-indigo-100 bg-black px-3.5 py-1.5 mr-0.5 mb-0.5 text-xs md:text-sm text-white font-normal">Attending Meetings</li>
                 </ul>
               </div>
             </div>
+
             <!-- last updated -->
             <div class="border-t border-gray-300">
-              <span class="text-gray-600 text-xs md:text-sm font-medium space-x-2"><i class="fa-regular fa-clock mr-1 md:mt-2.5"></i> updated 2 days ago</span>
+              <span class="text-gray-600 text-xs md:text-sm font-medium space-x-2"><i class="fa-regular fa-clock mr-1 md:mt-2.5 mb-2"></i> updated 2 days ago</span>
             </div>
           </div>
         </div>
