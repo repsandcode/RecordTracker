@@ -21,8 +21,9 @@ router.get("/logout", authController.logout);
 router.get("/signup", authController.getSignup);
 router.post("/signup", authController.postSignup);
 
-// profile & feed
+// profile, feed, new record
 router.get("/profile", ensureAuth, postsController.getProfile);
 router.get("/feed", ensureAuth, postsController.getFeed);
+router.get("/newRecord", ensureAuth, postsController.getNewRecord);
 
 module.exports = router;

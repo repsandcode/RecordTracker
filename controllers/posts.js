@@ -18,4 +18,12 @@ module.exports = {
       console.log(err);
     }
   },
+  getNewRecord: async (req, res) => {
+    try {
+      const posts = await Post.find({ user: req.user.id });
+      res.render("newRecord.ejs", { user: req.user });
+    } catch (err) {
+      console.log(err);
+    }
+  },
 };
