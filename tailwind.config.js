@@ -10,6 +10,6 @@ module.exports = {
   },
   // tailwind.config.js
   plugins: [
-    require("@tailwindcss/forms")
+    require('@tailwindcss/forms'),
   ],
 }
