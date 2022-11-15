@@ -1,7 +1,12 @@
 <%- include('partials/header') -%>
 
-<div class="min-h-full">
+<div class="min-h-full bg-blue-100">
   <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+
+    <input type="email" class="form-input px-4 py-3 rounded-full">
+    <input type="checkbox" class="form-checkbox rounded " />
+
+
     <form data-bitwarden-watching="1">
         <div class="relative z-0 mb-6 w-full group">
             <input type="email" name="floating_email" id="floating_email" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required="">
@@ -37,6 +42,66 @@
         </div>
         <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
       </form>
+
+
+      <div class="min-h-screen bg-gray-100 flex flex-col justify-center py-12 px-6 lg:px-8">
+        <div class="sm:mx-auto sm:w-full sm:max-w-md">
+          <img class="mx-auto h-12 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Workflow" />
+          <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">Create your account</h2>
+          <p class="mt-2 text-center text-sm text-gray-600 max-w">
+            Already registered?
+            <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500">Sign in</a>
+          </p>
+        </div>
+      
+        <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+          <div class="bg-white py-8 px-6 shadow rounded-lg sm:px-10">
+            <form class="mb-0 space-y-6" action="#" method="POST">
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
+                <div class="mt-1">
+                  <input id="email" name="email" type="email" autocomplete="email" required class="" />
+                </div>
+              </div>
+      
+              <div>
+                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                <div class="mt-1">
+                  <input id="password" name="password" type="password" autocomplete="current-password" required class="" />
+                </div>
+              </div>
+      
+              <div>
+                <label for="company-size" class="block text-sm font-medium text-gray-700">Company size</label>
+                <div class="mt-1">
+                  <select name="company-size" id="company-size" class="">
+                    <option value="">Please select</option>
+                    <option value="small">1 to 10 employees</option>
+                    <option value="medium">11 to 50 employees</option>
+                    <option value="large">50+ employees</option>
+                  </select>
+                </div>
+              </div>
+      
+              <div class="flex items-center">
+                <input id="terms-and-privacy" name="terms-and-privacy" type="checkbox" class="" />
+                <label for="terms-and-privacy" class="ml-2 block text-sm text-gray-900"
+                  >I agree to the
+                  <a href="#" class="text-indigo-600 hover:text-indigo-500">Terms</a>
+                  and
+                  <a href="#" class="text-indigo-600 hover:text-indigo-500">Privacy Policy</a>.
+                </label>
+              </div>
+      
+              <div>
+                <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Sign up</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      
   </div>
 </div>
 
