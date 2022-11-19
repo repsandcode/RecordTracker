@@ -19,7 +19,11 @@ const PostSchema = new mongoose.Schema({
     required: true,
     enum: ['Male', 'Female'],
   },
-  area: {
+  municipality: {
+    type: String,
+    required: true,
+  },
+  barangay: {
     type: String,
     required: true,
   },
