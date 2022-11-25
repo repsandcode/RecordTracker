@@ -1,252 +1,278 @@
 <%- include('partials/header') -%>
 
-<div class="bg-indigo-50">
+  <div class="bg-indigo-50">
 
-  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-8">
-
-    <div class="md:grid md:grid-cols-3 md:gap-6">
-      
-      <div class="md:col-span-1">
-        <div class="px-4 sm:px-0">
-          <h3 class="text-xl font-medium leading-6 text-gray-900">Identity</h3>
-          <p class="mt-1 text-sm text-gray-600">Brief general profile of the householder.</p>
-        </div>
-      </div>
-  
-      <div class="mt-5 md:col-span-2 md:mt-0">
-        <form action="#" method="POST">
-          <div class="shadow sm:overflow-hidden sm:rounded-md">
-            <div class="space-y-8 bg-white px-4 py-5 sm:p-6">
-              <div class="grid grid-cols-4 gap-6">
-                
-                <div class="col-span-6 sm:col-span-4">
-                  <label for="complete-name" class="block text-sm font-medium text-gray-700">Complete name</label>
-                  <input type="text" name="complete-name" id="complete-name" autocomplete="complete-name" required class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="Pratya Jean">
-                </div>
-
-                <div class="col-span-6 sm:col-span-2">
-                  <label for="gender" class="block text-sm font-medium text-gray-700">Gender</label>
-                  <select id="gender" name="gender" required class="form-select mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
-                    <option value="" disabled selected hidden>Select an option</option>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                  </select>
-                </div>
-
-                <div class="col-span-6 sm:col-span-2">
-                  <label for="nationality" class="block text-sm font-medium text-gray-700">Nationality</label>
-                  <input type="text" name="nationality" id="nationality" autocomplete="nationality" required class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="Indian">
-                </div>
-
-                <div class="col-span-6 sm:col-span-2">
-                  <label for="email-address" class="block text-sm font-medium text-gray-700">Email address</label>
-                  <input type="email" name="email-address" id="email-address" class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="pratyajean@example.com">
-                </div>
-
-                <div class="col-span-6 sm:col-span-2">
-                  <label for="social-media" class="block text-sm font-medium text-gray-700">Social Media URL</label>
-                  <input type="url" name="social-media" id="social-media" class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="https://www.example.com/pratyajean/">
-                </div>
-              </div>
-            </div>
-
-            <div class="bg-gray-50 px-4 py-3 text-right sm:px-6">
-              <button type="submit" class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Save</button>
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-8">
+      <!-- start of form -->
+      <form action="#" method="POST">
+        <!-- 1. IDENTITY -->
+        <div class="md:grid md:grid-cols-3 md:gap-6">
+          <div class="md:col-span-1">
+            <div class="px-4 sm:px-0">
+              <h3 class="text-xl font-medium leading-6 text-gray-900">Identity</h3>
+              <p class="mt-1 text-sm text-gray-600">Brief general profile of the householder.</p>
             </div>
           </div>
-        </form>
-      </div>
-  
-    </div>
-  
-    <!-- borderrrrrsss -->
-    <div class="hidden sm:block" aria-hidden="true">
-      <div class="py-20">
-        <div class="border-t border-gray-200"></div>
-      </div>
-    </div>
-  
-    <div class="mt-10 sm:mt-0">
-      <div class="md:grid md:grid-cols-3 md:gap-6">
 
-        <div class="md:col-span-1">
-          <div class="px-4 sm:px-0">
-            <h3 class="text-xl font-medium leading-6 text-gray-900">Location</h3>
-            <p class="mt-1 text-sm text-gray-600">Geographical information of the housholder.</p>
-          </div>
-        </div>
+          <div class="mt-5 md:col-span-2 md:mt-0">
+            <div class="shadow overflow-hidden rounded-md">
+              <div class="space-y-8 bg-white px-4 py-5 sm:px-6 sm:pt-6 sm:pb-7">
+                <div class="grid grid-cols-4 gap-6">
 
-        <div class="mt-5 md:col-span-2 md:mt-0">
-          <form action="#" method="POST">
-            <div class="overflow-hidden shadow sm:rounded-md">
-              <div class="bg-white px-4 py-5 sm:p-6">
-                <div class="grid grid-cols-6 gap-6">
+                  <div class="col-span-6 sm:col-span-4">
+                    <label for="complete-name" class="block text-sm font-medium text-gray-700">Complete name</label>
+                    <input type="text" name="complete-name" id="complete-name" autocomplete="complete-name" required
+                      class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      placeholder="Pratya Jean">
+                  </div>
 
-                  <div class="col-span-6">
-                    <label for="initialCallSetting" class="block text-sm font-medium text-gray-700">Initial Call Setting</label>
-                    <select id="initialCallSetting" name="initialCallSetting" required class="form-select mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                  <div class="col-span-6 sm:col-span-2">
+                    <label for="gender" class="block text-sm font-medium text-gray-700">Gender</label>
+                    <select id="gender" name="gender" required
+                      class="form-select mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
                       <option value="" disabled selected hidden>Select an option</option>
-                      <option value="Door to Door Ministry">Door to Door ministry</option>
-                      <option value="Street Witnessing">Street Witnessing</option>
-                      <option value="Public Witessing">Public Witnessing</option>
-                      <option value="Informal Witnessing">Informal Witnessing</option>
-                      <option value="Referral">Referral</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
                     </select>
-                  </div>               
-                  
-                  <div class="col-span-6">
-                    <label for="municipality" class="block text-sm font-medium text-gray-700">Municipality</label>
-                    <input type="text" name="municipality" id="municipality" autocomplete="address-level1" required class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="Ex: Dagupan">
                   </div>
 
-                  <div class="col-span-6">
-                    <label for="barangay" class="block text-sm font-medium text-gray-700">Barangay</label>
-                    <input type="text" name="barangay" id="barangay" autocomplete="address-level2" required class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="Ex: Tapuac-Amado">
-                  </div>
-  
-                  <div class="col-span-6">
-                    <label for="houseAddress" class="block text-sm font-medium text-gray-700">House address</label>
-                    <input type="text" name="houseAddress" id="houseAddress" autocomplete="houseAddress" required class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="Door 5 Example Apt. Sample St.">
-                  </div>
-  
-                  <div class="col-span-6">
-                    <label for="landmark" class="block text-sm font-medium text-gray-700">Landmark</label>
-                    <input type="text" name="landmark" id="landmark" autocomplete="landmark" class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="Example Apt located in front of Ali's Shawarma">
+                  <div class="col-span-6 sm:col-span-2">
+                    <label for="nationality" class="block text-sm font-medium text-gray-700">Nationality</label>
+                    <input type="text" name="nationality" id="nationality" autocomplete="nationality" required
+                      class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      placeholder="Indian">
                   </div>
 
+                  <div class="col-span-6 sm:col-span-2">
+                    <label for="email-address" class="block text-sm font-medium text-gray-700">Email address</label>
+                    <input type="email" name="email-address" id="email-address"
+                      class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      placeholder="pratyajean@example.com">
+                  </div>
+
+                  <div class="col-span-6 sm:col-span-2">
+                    <label for="social-media" class="block text-sm font-medium text-gray-700">Social Media URL</label>
+                    <input type="url" name="social-media" id="social-media"
+                      class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      placeholder="https://www.example.com/pratyajean/">
+                  </div>
                 </div>
               </div>
-              <div class="bg-gray-50 px-4 py-3 text-right sm:px-6">
-                <button type="submit" class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Next</button> 
-              </div>
             </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  
-    <!-- borderrrrsss -->
-    <div class="hidden sm:block" aria-hidden="true">
-      <div class="py-20">
-        <div class="border-t border-gray-200"></div>
-      </div>
-    </div>
-  
-    <div class="mt-10 sm:mt-0">
-      <div class="md:grid md:grid-cols-3 md:gap-6">
-        <div class="md:col-span-1">
-          <div class="px-4 sm:px-0">
-            <h3 class="text-xl font-medium leading-6 text-gray-900">Assessment</h3>
-            <p class="mt-1 text-sm text-gray-600">Put in more details to record the progress of the householder.</p>
           </div>
         </div>
-        <div class="mt-5 md:col-span-2 md:mt-0">
-          <form action="#" method="POST">
-            <div class="overflow-hidden shadow sm:rounded-md">
-              <div class="space-y-8 bg-white px-4 py-5 sm:p-6">
 
-                <div class="col-span-6">
-                  <label for="publisher" class="block text-sm font-medium text-gray-700">Publisher</label>
-                  <select id="publisher" name="publisher" required class="form-select mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
-                    <option value="" disabled selected hidden>Select an option</option>
-                    <option value="Albert Jonathan Borja">AJ Borja</option>
-                    <option value="Albert Jonathan Borja">AJ Borja</option>
-                  </select>
-                </div>
+        <!-- borderrrrrsss -->
+        <div class="hidden sm:block" aria-hidden="true">
+          <div class="py-5">
+            <div class="border-t border-gray-200"></div>
+          </div>
+        </div>
 
-                <div>
-                  <label for="comments" class="block text-sm font-medium text-gray-700">Comments</label>
-                  <div class="mt-1">
-                    <textarea id="comments" name="comments" rows="3" class="form-textarea mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="It was a great call with Pratya ..."></textarea>
-                  </div>
-                  <p class="mt-2 text-sm text-gray-500">Description of the householder. Any useful details.</p>
-                </div>
-
-                <div class="col-span-5">
-                  <label for="publications" class="block text-sm font-medium text-gray-700">Publication</label>
-                  <input type="text" name="publications" id="publications" autocomplete="publications" class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="Enjoy Life Forever Brochure">
-                </div>
-
-                <!-- STATUS as radio buttons -->
-                <fieldset>
-                  <legend class="block text-sm font-medium text-gray-700">Status</legend>
-                  <p class="text-sm text-gray-500">This could be updated in the future.</p>
-                  <div class="mt-4 space-y-4">
-                    <div class="flex items-center">
-                      <input id="initial-call" name="status" type="radio" class="form-radio h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                      <label for="initial-call" class="ml-3 block text-sm font-medium text-gray-700">Initial Call</label>
-                    </div>
-                    <div class="flex items-center">
-                      <input id="return-visit" name="status" type="radio" class="form-radio h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                      <label for="return-visit" class="ml-3 block text-sm font-medium text-gray-700">Return Visit</label>
-                    </div>
-                    <div class="flex items-center">
-                      <input id="bible-study" name="status" type="radio" class="form-radio h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                      <label for="bible-study" class="ml-3 block text-sm font-medium text-gray-700">Bible Study</label>
-                    </div>
-                    <div class="flex items-center">
-                      <input id="not-interested" name="status" type="radio" class="form-radio h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                      <label for="not-interested" class="ml-3 block text-sm font-medium text-gray-700">Not Interested</label>
-                    </div>
-                    <div class="flex items-center">
-                      <input id="do-not-call" name="status" type="radio" class="form-radio h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                      <label for="do-not-call" class="ml-3 block text-sm font-medium text-gray-700">Do Not Call</label>
-                    </div>
-                    <div class="flex items-center">
-                      <input id="not-in-territory" name="status" type="radio" class="form-radio h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                      <label for="not-in-territory" class="ml-3 block text-sm font-medium text-gray-700">Not in Territory</label>
-                    </div>
-                  </div>
-                </fieldset>
-
-                <fieldset>
-                  <legend class="sr-only">Background Check</legend>
-                  <div class="block text-sm font-medium text-gray-700" aria-hidden="true">Background Check</div>
-                  <div class="mt-4 space-y-4">
-                    <div class="flex items-start">
-                      <div class="flex h-5 items-center">
-                        <input id="english-dependent" name="isEnglishDependent" type="checkbox" class="form-checkbox h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                      </div>
-                      <div class="ml-3 text-sm">
-                        <label for="english-dependent" class="font-medium text-gray-700">English Dependent</label>
-                        <p class="text-gray-500">Is the householder english-dependent?</p>
-                      </div>
-                    </div>
-                    <div class="flex items-start">
-                      <div class="flex h-5 items-center">
-                        <input id="lives-within-pangasinan" name="livesWithinPangasinan" type="checkbox" class="form-checkbox h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                      </div>
-                      <div class="ml-3 text-sm">
-                        <label for="lives-within-pangasinan" class="font-medium text-gray-700">Lives Within Pangasinan</label>
-                        <p class="text-gray-500">Is the householder currently residing within Pangasinan?</p>
-                      </div>
-                    </div>
-                    <div class="flex items-start">
-                      <div class="flex h-5 items-center">
-                        <input id="attending-meetings" name="isAttendingMeetings" type="checkbox" class="form-checkbox h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                      </div>
-                      <div class="ml-3 text-sm">
-                        <label for="attending-meetings" class="font-medium text-gray-700">Attending Meetings</label>
-                        <p class="text-gray-500">Is the householder regularly attending the meetings (face-to-face or online)?</p>
-                      </div>
-                    </div>
-                  </div>
-                </fieldset>
-
-                
-              </div>
-              <div class="bg-gray-50 px-4 py-3 text-right sm:px-6">
-                <button type="submit" class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Save</button>
+        <!-- 2: LOCATION -->
+        <div class="mt-10 sm:mt-0">
+          <div class="md:grid md:grid-cols-3 md:gap-6">
+            <div class="md:col-span-1">
+              <div class="px-4 sm:px-0">
+                <h3 class="text-xl font-medium leading-6 text-gray-900">Location</h3>
+                <p class="mt-1 text-sm text-gray-600">Geographical information of the householder.</p>
               </div>
             </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  
-  
-    <!-- end of form -->
-  </div>
-</div>
 
-<%- include('partials/footer') -%>
+            <div class="mt-5 md:col-span-2 md:mt-0">
+              <div class="overflow-hidden shadow rounded-md">
+                <div class="bg-white px-4 py-5 sm:px-6 sm:pt-6 sm:pb-7">
+                  <div class="grid grid-cols-6 gap-6">
+                    <div class="col-span-6">
+                      <label for="initialCallSetting" class="block text-sm font-medium text-gray-700">Initial Call
+                        Setting</label>
+                      <select id="initialCallSetting" name="initialCallSetting" required
+                        class="form-select mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                        <option value="" disabled selected hidden>Select an option</option>
+                        <option value="Door to Door Ministry">Door to Door ministry</option>
+                        <option value="Street Witnessing">Street Witnessing</option>
+                        <option value="Public Witessing">Public Witnessing</option>
+                        <option value="Informal Witnessing">Informal Witnessing</option>
+                        <option value="Referral">Referral</option>
+                      </select>
+                    </div>
+
+                    <div class="col-span-6">
+                      <label for="municipality" class="block text-sm font-medium text-gray-700">Municipality</label>
+                      <input type="text" name="municipality" id="municipality" autocomplete="address-level1" required
+                        class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        placeholder="Ex: Dagupan">
+                    </div>
+
+                    <div class="col-span-6">
+                      <label for="barangay" class="block text-sm font-medium text-gray-700">Barangay</label>
+                      <input type="text" name="barangay" id="barangay" autocomplete="address-level2" required
+                        class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        placeholder="Ex: Tapuac-Amado">
+                    </div>
+
+                    <div class="col-span-6">
+                      <label for="houseAddress" class="block text-sm font-medium text-gray-700">House address</label>
+                      <input type="text" name="houseAddress" id="houseAddress" autocomplete="houseAddress" required
+                        class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        placeholder="Door 5 Example Apt. Sample St.">
+                    </div>
+
+                    <div class="col-span-6">
+                      <label for="landmark" class="block text-sm font-medium text-gray-700">Landmark</label>
+                      <input type="text" name="landmark" id="landmark" autocomplete="landmark"
+                        class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        placeholder="Example Apt located in front of Ali's Shawarma">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- borderrrrsss -->
+        <div class="hidden sm:block" aria-hidden="true">
+          <div class="py-5">
+            <div class="border-t border-gray-200"></div>
+          </div>
+        </div>
+
+        <!-- 3. ASSESSMENT -->
+        <div class="mt-10 sm:mt-0">
+          <div class="md:grid md:grid-cols-3 md:gap-6">
+            <div class="md:col-span-1">
+              <div class="px-4 sm:px-0">
+                <h3 class="text-xl font-medium leading-6 text-gray-900">Assessment</h3>
+                <p class="mt-1 text-sm text-gray-600">Put in more details to record the progress of the householder.</p>
+              </div>
+            </div>
+
+            <div class="mt-5 md:col-span-2 md:mt-0">
+              <div class="overflow-hidden shadow rounded-md">
+                <div class="space-y-8 bg-white px-4 py-5 sm:px-6 sm:pt-6 sm:pb-7">
+                  <div class="col-span-6">
+                    <label for="publisher" class="block text-sm font-medium text-gray-700">Publisher</label>
+                    <select id="publisher" name="publisher" required
+                      class="form-select mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                      <option value="" disabled selected hidden>Select an option</option>
+                      <option value="Albert Jonathan Borja">AJ Borja</option>
+                      <option value="Albert Jonathan Borja">AJ Borja</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label for="comments" class="block text-sm font-medium text-gray-700">Comments</label>
+                    <div class="mt-1">
+                      <textarea id="comments" name="comments" rows="3"
+                        class="form-textarea mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                        placeholder="It was a great call with Pratya ..."></textarea>
+                    </div>
+                    <p class="mt-2 text-sm text-gray-500">Description of the householder. Any useful details.</p>
+                  </div>
+
+                  <div class="col-span-5">
+                    <label for="publications" class="block text-sm font-medium text-gray-700">Publication</label>
+                    <input type="text" name="publications" id="publications" autocomplete="publications"
+                      class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      placeholder="Enjoy Life Forever Brochure">
+                  </div>
+
+                  <!-- STATUS as radio buttons -->
+                  <fieldset>
+                    <legend class="block text-sm font-medium text-gray-700">Status</legend>
+                    <p class="text-sm text-gray-500">This could be updated in the future.</p>
+                    <div class="mt-4 space-y-4">
+                      <div class="flex items-center">
+                        <input id="initial-call" name="status" type="radio"
+                          class="form-radio h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                        <label for="initial-call" class="ml-3 block text-sm font-medium text-gray-700">Initial
+                          Call</label>
+                      </div>
+                      <div class="flex items-center">
+                        <input id="return-visit" name="status" type="radio"
+                          class="form-radio h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                        <label for="return-visit" class="ml-3 block text-sm font-medium text-gray-700">Return
+                          Visit</label>
+                      </div>
+                      <div class="flex items-center">
+                        <input id="bible-study" name="status" type="radio"
+                          class="form-radio h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                        <label for="bible-study" class="ml-3 block text-sm font-medium text-gray-700">Bible
+                          Study</label>
+                      </div>
+                      <div class="flex items-center">
+                        <input id="not-interested" name="status" type="radio"
+                          class="form-radio h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                        <label for="not-interested" class="ml-3 block text-sm font-medium text-gray-700">Not
+                          Interested</label>
+                      </div>
+                      <div class="flex items-center">
+                        <input id="do-not-call" name="status" type="radio"
+                          class="form-radio h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                        <label for="do-not-call" class="ml-3 block text-sm font-medium text-gray-700">Do Not
+                          Call</label>
+                      </div>
+                      <div class="flex items-center">
+                        <input id="not-in-territory" name="status" type="radio"
+                          class="form-radio h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                        <label for="not-in-territory" class="ml-3 block text-sm font-medium text-gray-700">Not in
+                          Territory</label>
+                      </div>
+                    </div>
+                  </fieldset>
+
+                  <fieldset>
+                    <legend class="sr-only">Background Check</legend>
+                    <div class="block text-sm font-medium text-gray-700" aria-hidden="true">Background Check</div>
+                    <div class="mt-4 space-y-4">
+                      <div class="flex items-start">
+                        <div class="flex h-5 items-center">
+                          <input id="english-dependent" name="isEnglishDependent" type="checkbox"
+                            class="form-checkbox h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                        </div>
+                        <div class="ml-3 text-sm">
+                          <label for="english-dependent" class="font-medium text-gray-700">English Dependent</label>
+                          <p class="text-gray-500">Is the householder english-dependent?</p>
+                        </div>
+                      </div>
+                      <div class="flex items-start">
+                        <div class="flex h-5 items-center">
+                          <input id="lives-within-pangasinan" name="livesWithinPangasinan" type="checkbox"
+                            class="form-checkbox h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                        </div>
+                        <div class="ml-3 text-sm">
+                          <label for="lives-within-pangasinan" class="font-medium text-gray-700">Lives Within
+                            Pangasinan</label>
+                          <p class="text-gray-500">Is the householder currently residing within Pangasinan?</p>
+                        </div>
+                      </div>
+                      <div class="flex items-start">
+                        <div class="flex h-5 items-center">
+                          <input id="attending-meetings" name="isAttendingMeetings" type="checkbox"
+                            class="form-checkbox h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                        </div>
+                        <div class="ml-3 text-sm">
+                          <label for="attending-meetings" class="font-medium text-gray-700">Attending Meetings</label>
+                          <p class="text-gray-500">Is the householder regularly attending the meetings (face-to-face or
+                            online)?</p>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="my-3 py-3 text-right">
+          <button type="submit"
+            class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-5 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Save</button>
+        </div>
+      </form>
+      <!-- end of form -->
+    </div>
+  </div>
+
+  <%- include('partials/footer') -%>
