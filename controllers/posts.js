@@ -26,4 +26,31 @@ module.exports = {
       console.log(err);
     }
   },
+  createRecord: async (req, res) => {
+    try {
+      
+      await Post.create({
+        initialCallSetting: req.body.initialCallSetting,
+        completeName: req.body.completeName,
+        nationality: req.body.nationality,
+        gender: req.body.gender,
+        municipality: req.body.municipality,
+        barangay: req.body.barangay,
+        houseAdress: req.body.houseAdress,
+        landmark: req.body.landmark,
+        emailAddress: req.body.emailAddress,
+        contactNumber: req.body.contactNumber,
+        socialMediaLink: req.user.socialMedia,
+        publisher: req.user.publisher,
+        status: req.user.id,
+        comments: req.user.id,
+        publications: req.user.id,
+        barangay: req.user.id,
+      });
+      console.log("Post has been added!");
+      res.redirect("/profile");
+    } catch (err) {
+      console.log(err);
+    }
+  },
 };

@@ -31,13 +31,13 @@ const PostSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  landMark: {
+  landmark: {
     type: String,
   },
   emailAddress: {
     type: String,
   },
-  telephoneNumber: {
+  contactNumber: {
     type: String,
   },
   socialMediaLink: {
@@ -63,20 +63,24 @@ const PostSchema = new mongoose.Schema({
   },
   isEnglishDependent: {
     type: String,
-    enum: ['Yes', 'No'],
+    default: 'No',
   },
   livesWithPangasinan: {
     type: String,
-    enum: ['Yes', 'No'],
+    default: 'No',
   },
   isAttendingMeetings: {
     type: String,
-    enum: ['Yes', 'No'],
+    default: 'No',
   },
   createdAt: {
     type: Date,
     default: Date.now,
   },
 });
+
+function duplicate(v){
+  return v === undefined ? this.name : v;
+}
 
 module.exports = mongoose.model("Post", PostSchema);
