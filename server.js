@@ -11,6 +11,7 @@ const connectDB = require('./config/database');
 const path = require('path');
 // Routes Variables
 const mainRoutes = require('./routes/main');
+const postRoutes = require("./routes/posts");
 
 
 // use .env file in config folder
@@ -61,6 +62,7 @@ app.use(flash());
 
 // Setup Routes where the Server is listening
 app.use('/', mainRoutes);
+app.user('/post', )
 
 // listen to DB
 app.listen(process.env.PORT, ()=>{

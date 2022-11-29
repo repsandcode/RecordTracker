@@ -47,8 +47,8 @@ module.exports = {
         publications: req.user.id,
         barangay: req.user.id,
       });
-      console.log("Post has been added!");
-      res.redirect("/profile");
+      console.log("Record has been added!");
+      res.redirect("/feed");
     } catch (err) {
       console.log(err);
     }
