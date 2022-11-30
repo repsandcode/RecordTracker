@@ -41,11 +41,13 @@ module.exports = {
         emailAddress: req.body.emailAddress,
         contactNumber: req.body.contactNumber,
         socialMediaLink: req.user.socialMedia,
-        publisher: req.user.publisher,
-        status: req.user.id,
-        comments: req.user.id,
-        publications: req.user.id,
-        barangay: req.user.id,
+        publisher: req.user.id,
+        status: req.body.status,
+        comments: req.body.comments,
+        publications: req.body.publications,
+        isEnglishDependent: req.body.isEnglishDependent,
+        livesWithPangasinan: req.body.livesWithPangasinan,
+        isAttendingMeetings: req.body.isAttendingMeetings,
       });
       console.log("Record has been added!");
       res.redirect("/feed");
