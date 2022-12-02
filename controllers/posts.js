@@ -36,7 +36,7 @@ module.exports = {
         gender: req.body.gender,
         municipality: req.body.municipality,
         barangay: req.body.barangay,
-        houseAdress: req.body.houseAdress,
+        houseAddress: req.body.houseAddress,
         landmark: req.body.landmark,
         emailAddress: req.body.emailAddress,
         contactNumber: req.body.contactNumber,

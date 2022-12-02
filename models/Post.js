@@ -27,7 +27,7 @@ const PostSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  houseAdress: {
+  houseAddress: {
     type: String,
     required: true,
   },
