@@ -40,7 +40,7 @@ module.exports = {
         landmark: req.body.landmark,
         emailAddress: req.body.emailAddress,
         contactNumber: req.body.contactNumber,
-        socialMediaLink: req.user.socialMedia,
+        socialMediaLink: req.body.socialMedia,
         publisher: req.user.id,
         status: req.body.status,
         comments: req.body.comments,
@@ -49,6 +49,7 @@ module.exports = {
         livesWithPangasinan: req.body.livesWithPangasinan,
         isAttendingMeetings: req.body.isAttendingMeetings,
       });
+      
       console.log("Record has been added!");
       res.redirect("/feed");
     } catch (err) {
