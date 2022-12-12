@@ -18,6 +18,14 @@ module.exports = {
       console.log(err);
     }
   },
+  getRecord: async (req, res) => {
+    try {
+      const post = await Post.findById(req.params.id);
+      res.render("record.ejs", { post: post, user: req.user });
+    } catch (err) {
+      console.log(err);
+    }
+  },
   getNewRecord: async (req, res) => {
     try {
       const posts = await Post.find({ user: req.user.id });

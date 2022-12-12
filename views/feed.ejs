@@ -35,51 +35,53 @@
       
       <% for(let i=0; i<posts.length; i++) {%>
         <div class="group relative">
-          <div class="relative group-hover:cursor-pointer group-hover:opacity-80 aspect-w-1 aspect-h-1 w-full rounded-lg px-4 py-3 overflow-hidden bg-base-100 shadow-xl">       
-            <!-- can add google maps location at here above description -->
-            <div class="">
-              <!-- name and button -->
-              <div class="mb-4">
-                <h1 class="text-gray-900 font-medium text-xl md:text-2xl"><%= posts[i].completeName %></h1>
-                <!-- possible button to update record -->
-              </div>
-              <!-- details of the householder -->
-              <div class="flex flex-col space-y-3 mb-4">
-                <!-- upper | nationality and location in our territory -->
-                <div class="flex border-solid">
-                  <span class="items-center text-sm md:text-base font-medium mr-4">
-                    <i class="fa-solid fa-language mr-2"></i><%= posts[i].nationality %>
-                  </span>
-                  <!-- <span class="flex items-center">
-                    <span class="border-l-2 border-gray-500 h-3"></span>
-                  </span> -->
-                  <span class="items-center text-sm md:text-base font-medium ml-4">
-                    <i class="fa-solid fa-location-dot mr-2"></i><%= posts[i].barangay + ", " + posts[i].municipality %>
-                  </span>
+          <a href="/record/<%= posts[i]._id %>">
+            <div class="relative group-hover:cursor-pointer group-hover:opacity-80 aspect-w-1 aspect-h-1 w-full rounded-lg px-4 py-3 overflow-hidden bg-base-100 shadow-xl">       
+              <!-- can add google maps location at here above description -->
+              <div class="">
+                <!-- name and button -->
+                <div class="mb-4">
+                  <h1 class="text-gray-900 font-medium text-xl md:text-2xl"><%= posts[i].completeName %></h1>
+                  <!-- possible button to update record -->
                 </div>
-                <!-- bottom | status as a call -->
-                <div class="border-solid">
-                  <ul class="outline-0 flex flex-wrap">
-                    <li class="flex items-center justify-center rounded-full border border-indigo-100 bg-black px-3.5 py-1.5 mr-0.5 mb-0.5 text-xs md:text-sm text-white font-normal"><%= posts[i].status %></li>
-                    <% if(posts[i].isEnglishDependent==="Yes"){ %>
-                      <li class="flex items-center justify-center rounded-full border border-indigo-100 bg-black px-3.5 py-1.5 mr-0.5 mb-0.5 text-xs md:text-sm text-white font-normal">English Dependent</li>
-                    <% } %>
-                    <% if(posts[i].livesWithPangasinan==="Yes"){ %>
-                      <li class="flex items-center justify-center rounded-full border border-indigo-100 bg-black px-3.5 py-1.5 mr-0.5 mb-0.5 text-xs md:text-sm text-white font-normal">Lives Within Pangasinan</li>
-                    <% } %>
-                    <% if(posts[i].isAttendingMeetings==="Yes"){ %>
-                      <li class="flex items-center justify-center rounded-full border border-indigo-100 bg-black px-3.5 py-1.5 mr-0.5 mb-0.5 text-xs md:text-sm text-white font-normal">Attending Meetings</li>
-                    <% } %>
-                  </ul>
+                <!-- details of the householder -->
+                <div class="flex flex-col space-y-3 mb-4">
+                  <!-- upper | nationality and location in our territory -->
+                  <div class="flex border-solid">
+                    <span class="items-center text-sm md:text-base font-medium mr-4">
+                      <i class="fa-solid fa-language mr-2"></i><%= posts[i].nationality %>
+                    </span>
+                    <!-- <span class="flex items-center">
+                      <span class="border-l-2 border-gray-500 h-3"></span>
+                    </span> -->
+                    <span class="items-center text-sm md:text-base font-medium ml-4">
+                      <i class="fa-solid fa-location-dot mr-2"></i><%= posts[i].barangay + ", " + posts[i].municipality %>
+                    </span>
+                  </div>
+                  <!-- bottom | status as a call -->
+                  <div class="border-solid">
+                    <ul class="outline-0 flex flex-wrap">
+                      <li class="flex items-center justify-center rounded-full border border-indigo-100 bg-black px-3.5 py-1.5 mr-0.5 mb-0.5 text-xs md:text-sm text-white font-normal"><%= posts[i].status %></li>
+                      <% if(posts[i].isEnglishDependent==="Yes"){ %>
+                        <li class="flex items-center justify-center rounded-full border border-indigo-100 bg-black px-3.5 py-1.5 mr-0.5 mb-0.5 text-xs md:text-sm text-white font-normal">English Dependent</li>
+                      <% } %>
+                      <% if(posts[i].livesWithPangasinan==="Yes"){ %>
+                        <li class="flex items-center justify-center rounded-full border border-indigo-100 bg-black px-3.5 py-1.5 mr-0.5 mb-0.5 text-xs md:text-sm text-white font-normal">Lives Within Pangasinan</li>
+                      <% } %>
+                      <% if(posts[i].isAttendingMeetings==="Yes"){ %>
+                        <li class="flex items-center justify-center rounded-full border border-indigo-100 bg-black px-3.5 py-1.5 mr-0.5 mb-0.5 text-xs md:text-sm text-white font-normal">Attending Meetings</li>
+                      <% } %>
+                    </ul>
+                  </div>
                 </div>
+    
+                <!-- last updated -->
+                <!-- <div class="border-t border-gray-300">
+                  <span class="text-gray-600 text-xs md:text-sm font-medium space-x-2"><i class="fa-regular fa-clock mr-1 md:mt-2.5 mb-2"></i> updated 2 days ago</span>
+                </div> -->
               </div>
-  
-              <!-- last updated -->
-              <!-- <div class="border-t border-gray-300">
-                <span class="text-gray-600 text-xs md:text-sm font-medium space-x-2"><i class="fa-regular fa-clock mr-1 md:mt-2.5 mb-2"></i> updated 2 days ago</span>
-              </div> -->
             </div>
-          </div>
+          </a>
         </div>
       <% } %>
     

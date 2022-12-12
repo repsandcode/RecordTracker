@@ -4,7 +4,7 @@ const postsController = require("../controllers/posts");
 const { ensureAuth, ensureGuest } = require("../middleware/auth");
 
 //Post Routes - simplified for now
-// router.get("/:id", ensureAuth, postsController.getRecord);
+router.get("/:id", ensureAuth, postsController.getRecord);
 
 router.post("/createRecord", postsController.createRecord);
 
