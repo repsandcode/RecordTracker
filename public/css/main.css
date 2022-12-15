@@ -1003,6 +1003,10 @@ select {
   height: 24rem;
 }
 
+.h-screen {
+  height: 100vh;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
