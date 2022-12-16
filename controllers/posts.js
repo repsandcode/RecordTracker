@@ -1,5 +1,6 @@
 // const cloudinary = require("../middleware/cloudinary");
 const Post = require("../models/Post");
+const User = require("../models/User");
 
 module.exports = {
   getProfile: async (req, res) => {
@@ -28,8 +29,8 @@ module.exports = {
   },
   getNewRecord: async (req, res) => {
     try {
-      const posts = await Post.find({ user: req.user.id });
-      res.render("newRecord.ejs", { user: req.user });
+      const users = await User.find().sort({ createdAt: "desc" }).lean();
+      res.render("newRecord.ejs", { users: users, user: req.user });
     } catch (err) {
       console.log(err);
     }
