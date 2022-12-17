@@ -22,7 +22,9 @@ module.exports = {
   getRecord: async (req, res) => {
     try {
       const post = await Post.findById(req.params.id);
-      res.render("record.ejs", { post: post, user: req.user });
+      const publisher = await User.findById(post.publisher);
+      console.log(publisher);
+      res.render("record.ejs", { post: post, publisher: publisher, user: req.user });
     } catch (err) {
       console.log(err);
     }
@@ -50,7 +52,7 @@ module.exports = {
         emailAddress: req.body.emailAddress,
         contactNumber: req.body.contactNumber,
         socialMediaLink: req.body.socialMedia,
-        publisher: req.user.id,
+        publisher: req.body.publisher,
         status: req.body.status,
         comments: req.body.comments,
         publications: req.body.publications,

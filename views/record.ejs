@@ -32,17 +32,23 @@
 
             <div class="col-span-4 sm:col-span-2">
               <h4 class="text-sm font-medium text-gray-500">Contact Number</h4>
-              <p class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0"><%= post.contactNumber %></p>
+              <p class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
+                <a href="tel:+<%= post.contactNumber %>"><%= post.contactNumber %></a>
+              </p>
             </div>
 
             <div class="col-span-4 sm:col-span-2">
               <h4 class="text-sm font-medium text-gray-500">Email address</h4>
-              <p class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0"><%= post.emailAddress %></p>
+              <p class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
+                <a href="mailto:<%= post.emailAddress %>"><%= post.emailAddress %></a>  
+              </p>
             </div>
 
             <div class="col-span-4 sm:col-span-2">
               <h4 class="text-sm font-medium text-gray-500">Social Media URL</h4>
-              <p class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0"><%= post.socialMediaLink %></p>
+              <p class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
+                <a href="<%= post.socialMediaLink %>" target="_blank"><%= post.socialMediaLink %></a>
+              </p>
             </div>
 
 
@@ -77,7 +83,7 @@
             <!-- Assessment -->
             <div class="col-span-4 sm:col-span-2">
               <h4 class="text-sm font-medium text-gray-500">Publisher</h4>
-              <p class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0"><%= post.publisher %></p>
+              <p class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0"><%= publisher.firstName + ' ' + publisher.lastName %></p>
             </div>
 
             <div class="col-span-4 sm:col-span-2">
