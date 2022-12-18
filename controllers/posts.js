@@ -5,7 +5,7 @@ const User = require("../models/User");
 module.exports = {
   getProfile: async (req, res) => {
     try {
-      const posts = await Post.find({ user: req.user.id });
+      const posts = await Post.find({ publisher: req.user.id }).sort({ createdAt: "desc" }).lean();
       res.render("profile.ejs", { posts: posts, user: req.user });
     } catch (err) {
       console.log(err);
@@ -23,7 +23,6 @@ module.exports = {
     try {
       const post = await Post.findById(req.params.id);
       const publisher = await User.findById(post.publisher);
-      console.log(publisher);
       res.render("record.ejs", { post: post, publisher: publisher, user: req.user });
     } catch (err) {
       console.log(err);

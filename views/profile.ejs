@@ -60,7 +60,7 @@
           </div>
         </div>
 
-        <div class="-mr-2 flex sm:hidden">
+        <div class="flex sm:hidden">
           <!-- Mobile menu button -->
           <button type="button" id="hamburger-menu" class="inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" aria-controls="mobile-menu" aria-expanded="false">
             <span class="sr-only">Open main menu</span>
@@ -87,20 +87,20 @@
 
     <!-- Mobile menu, show/hide based on menu state. -->
     <div class="hidden" id="mobile-menu">
-      <div class="space-y-1 px-2 pt-2 pb-3 sm:px-3">
+      <div class="space-y-1 px-4 pt-2 pb-3 sm:px-6">
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
 
-        <a href="/newRecord" class="flex items-center text-gray-300 hover:bg-purple-900 hover:text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">
+        <a href="/newRecord" class="flex items-center text-black hover:bg-purple-900 hover:text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">
           <!-- Heroicon name: mini/pencil -->
-          <svg class="-ml-1 mr-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <svg class="mr-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
             <path d="M2.695 14.763l-1.262 3.154a.5.5 0 00.65.65l3.155-1.262a4 4 0 001.343-.885L17.5 5.5a2.121 2.121 0 00-3-3L3.58 13.42a4 4 0 00-.885 1.343z" />
           </svg>
           New Call
         </a>
 
         <!-- logout -->
-        <a href="/logout" class="flex items-center text-gray-300 hover:bg-indigo-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="-ml-1 mr-2 h-5 w-5">
+        <a href="/logout" class="flex items-center text-black hover:bg-indigo-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="mr-2 h-5 w-5">
             <path fill-rule="evenodd" d="M3 4.25A2.25 2.25 0 015.25 2h5.5A2.25 2.25 0 0113 4.25v2a.75.75 0 01-1.5 0v-2a.75.75 0 00-.75-.75h-5.5a.75.75 0 00-.75.75v11.5c0 .414.336.75.75.75h5.5a.75.75 0 00.75-.75v-2a.75.75 0 011.5 0v2A2.25 2.25 0 0110.75 18h-5.5A2.25 2.25 0 013 15.75V4.25z" clip-rule="evenodd" />
             <path fill-rule="evenodd" d="M6 10a.75.75 0 01.75-.75h9.546l-1.048-.943a.75.75 0 111.004-1.114l2.5 2.25a.75.75 0 010 1.114l-2.5 2.25a.75.75 0 11-1.004-1.114l1.048-.943H6.75A.75.75 0 016 10z" clip-rule="evenodd" />
           </svg>                              
@@ -115,7 +115,7 @@
 
   <!-- NAME OF PUBLISHER -->
   <header class="bg-indigo-50">
-    <div class="mx-auto max-w-6xl py-6 px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-6xl py-8 px-6 lg:px-8">
       <h1 class="text-3xl font-bold leading-7 text-gray-900 sm:text-3xl sm:tracking-tight"><%= user.firstName + " " + user.lastName %></h1>
       <div class="mt-2 flex items-center text-sm text-gray-500">
         <!-- Heroicon name: mini/calendar -->
@@ -128,11 +128,61 @@
   </header>
 
   <!-- DISPLAY CONTENT -->
-  <main class="bg-indigo-50">
-    <div class="mx-auto max-w-6xl py-6 sm:px-6 lg:px-8">
-      <!-- Replace with your content -->
-      <div class="px-4 py-6 sm:px-0">
-        <div class="h-96 rounded-lg border-4 border-dashed border-gray-200"></div>
+  <main class="bg-indigo-50 h-screen">
+    <div class="mx-auto max-w-6xl px-6 py-8 sm:px-6 lg:px-8">
+      <!-- display all records named to the user/publisher -->
+      <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 md:grid-cols-2 xl:gap-x-8">
+        <% for(let i=0; i<posts.length; i++) {%>
+          <div class="group relative">
+            <a href="/record/<%= posts[i]._id %>">
+              <div class="relative group-hover:cursor-pointer group-hover:opacity-80 aspect-w-1 aspect-h-1 w-full rounded-lg px-4 py-3 overflow-hidden bg-base-100 shadow-xl">       
+                <!-- can add google maps location at here above description -->
+                <div class="">
+                  <!-- name and button -->
+                  <div class="mb-4">
+                    <h1 class="text-gray-900 font-medium text-xl md:text-2xl"><%= posts[i].completeName %></h1>
+                    <!-- possible button to update record -->
+                  </div>
+                  <!-- details of the householder -->
+                  <div class="flex flex-col space-y-3 mb-4">
+                    <!-- upper | nationality and location in our territory -->
+                    <div class="flex border-solid">
+                      <span class="items-center text-sm md:text-base font-medium mr-4">
+                        <i class="fa-solid fa-language mr-2"></i><%= posts[i].nationality %>
+                      </span>
+                      <!-- <span class="flex items-center">
+                        <span class="border-l-2 border-gray-500 h-3"></span>
+                      </span> -->
+                      <span class="items-center text-sm md:text-base font-medium ml-4">
+                        <i class="fa-solid fa-location-dot mr-2"></i><%= posts[i].barangay + ", " + posts[i].municipality %>
+                      </span>
+                    </div>
+                    <!-- bottom | status as a call -->
+                    <div class="border-solid">
+                      <ul class="outline-0 flex flex-wrap">
+                        <li class="flex items-center justify-center rounded-full border border-indigo-100 bg-black px-3.5 py-1.5 mr-0.5 mb-0.5 text-xs md:text-sm text-white font-normal"><%= posts[i].status %></li>
+                        <% if(posts[i].isEnglishDependent==="Yes"){ %>
+                          <li class="flex items-center justify-center rounded-full border border-indigo-100 bg-black px-3.5 py-1.5 mr-0.5 mb-0.5 text-xs md:text-sm text-white font-normal">English Dependent</li>
+                        <% } %>
+                        <% if(posts[i].livesWithPangasinan==="Yes"){ %>
+                          <li class="flex items-center justify-center rounded-full border border-indigo-100 bg-black px-3.5 py-1.5 mr-0.5 mb-0.5 text-xs md:text-sm text-white font-normal">Lives Within Pangasinan</li>
+                        <% } %>
+                        <% if(posts[i].isAttendingMeetings==="Yes"){ %>
+                          <li class="flex items-center justify-center rounded-full border border-indigo-100 bg-black px-3.5 py-1.5 mr-0.5 mb-0.5 text-xs md:text-sm text-white font-normal">Attending Meetings</li>
+                        <% } %>
+                      </ul>
+                    </div>
+                  </div>
+      
+                  <!-- last updated -->
+                  <!-- <div class="border-t border-gray-300">
+                    <span class="text-gray-600 text-xs md:text-sm font-medium space-x-2"><i class="fa-regular fa-clock mr-1 md:mt-2.5 mb-2"></i> updated 2 days ago</span>
+                  </div> -->
+                </div>
+              </div>
+            </a>
+          </div>
+        <% } %>
       </div>
       <!-- /End replace -->
     </div>
