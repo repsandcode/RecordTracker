@@ -9,6 +9,7 @@ const flash = require('express-flash');
 const logger = require('morgan');
 const connectDB = require('./config/database');
 const path = require('path');
+const PORT = process.env.PORT || 1914;
 // Routes Variables
 const mainRoutes = require('./routes/main');
 const postRoutes = require('./routes/posts');
@@ -65,6 +66,6 @@ app.use('/', mainRoutes);
 app.use('/record', postRoutes);
 
 // listen to DB
-app.listen(process.env.PORT, ()=>{
+app.listen(PORT, ()=>{
   console.log(`Server is running on PORT ${process.env.PORT}, you better catch it!`)
 }) 

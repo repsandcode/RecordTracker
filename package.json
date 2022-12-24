@@ -4,6 +4,7 @@
   "description": "simple recording app to track, edit, input interested calls",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "build": "tailwindcss -i ./public/css/input.css -o ./public/css/main.css",
     "watch": "tailwindcss -i ./public/css/input.css -o ./public/css/main.css --watch"
   },
